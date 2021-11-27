@@ -1,4 +1,4 @@
-package com.example.axie_counter_desktop
+package cu.justanothercoder.axie_counter_desktop
 
 import io.flutter.embedding.android.FlutterActivity
 
