@@ -40,16 +40,20 @@ class _HomeState extends State<Home> {
         body: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Image.asset('assets/energy.png',
-                  height: 50,
-                ),
-                Text('$count',
-                  style: const TextStyle(fontSize: 50),
-                ),
-              ],
+            Padding(
+              padding: const EdgeInsets.symmetric(vertical: 10),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Image.asset('assets/energy.png',
+                    height: 50,
+                  ),
+                  const SizedBox(width: 10,),
+                  Text('$count',
+                    style: const TextStyle(fontSize: 50),
+                  ),
+                ],
+              ),
             ),
             Row(
               crossAxisAlignment: CrossAxisAlignment.center,
@@ -57,12 +61,14 @@ class _HomeState extends State<Home> {
               children: [
                 AxieButton(
                   title: 'Sumar',
+                  assetDecoration: 'assets/axie_button_1.svg',
                   onPress: () => setState(() {
                     count++;
                   })
                 ),
                 AxieButton(
                   title: 'Restar',
+                  assetDecoration: 'assets/axie_button_2.svg',
                   onPress: () => setState(() {
                     if(count > 0) {
                       count--;
@@ -71,19 +77,21 @@ class _HomeState extends State<Home> {
                 ),
               ],
             ),
-            SizedBox(height: 10,),
+            const SizedBox(height: 10,),
             Row(
               crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 AxieButton(
                   title: 'Sumar 2',
+                  assetDecoration: 'assets/axie_button_3.svg',
                   onPress: () => setState(() {
                     count = count + 2;
                   })
                 ),
                 AxieButton(
                   title: 'Reiniciar',
+                  assetDecoration: 'assets/axie_button_4.svg',
                   onPress: () => setState(() {
                     count = 3;
                   })

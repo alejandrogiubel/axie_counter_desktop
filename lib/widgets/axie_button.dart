@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -5,11 +7,13 @@ class AxieButton extends StatelessWidget {
   const AxieButton({
     required this.title,
     this.color = Colors.blue,
+    required this.assetDecoration,
     this.onPress,
     Key? key}) : super(key: key);
   final String title;
   final Function()? onPress;
   final Color color;
+  final String assetDecoration;
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +32,7 @@ class AxieButton extends StatelessWidget {
             ),
           ),
           SvgPicture.asset(
-            'assets/axie_button.svg',
+            assetDecoration,
             color: Colors.black12,
           ),
           Center(child: Text(title)),
