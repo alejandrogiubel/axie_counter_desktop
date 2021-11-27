@@ -53,7 +53,7 @@ class _HomeState extends State<Home> {
             ),
             Row(
               crossAxisAlignment: CrossAxisAlignment.center,
-              mainAxisAlignment: MainAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 AxieButton(
                   title: 'Sumar',
@@ -71,9 +71,10 @@ class _HomeState extends State<Home> {
                 ),
               ],
             ),
+            SizedBox(height: 10,),
             Row(
               crossAxisAlignment: CrossAxisAlignment.center,
-              mainAxisAlignment: MainAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 AxieButton(
                   title: 'Sumar 2',
