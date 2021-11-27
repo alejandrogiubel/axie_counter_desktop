@@ -48,6 +48,6 @@ class AxieButton extends StatelessWidget {
           )
         ],
       ),
-    )    ;
+    );
   }
 }

@@ -1,5 +1,6 @@
 import 'package:animated_theme_switcher/animated_theme_switcher.dart';
 import 'package:axie_counter_desktop/widgets/axie_button.dart';
+import 'package:axie_counter_desktop/widgets/close_button.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:window_manager/window_manager.dart';
@@ -30,11 +31,8 @@ class _HomeState extends State<Home> {
       child: Scaffold(
         appBar: AppBar(
           title: const Text('Axie Counter'),
-          actions: [
-            IconButton(
-              onPressed: () => windowManager.terminate(),
-              icon: const Icon(CupertinoIcons.clear)
-            )
+          actions: const [
+            AxieCloseButton()
           ],
         ),
         body: Column(
