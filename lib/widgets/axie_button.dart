@@ -10,7 +10,7 @@ class AxieButton extends StatelessWidget {
     required this.assetDecoration,
     this.onPress,
     Key? key}) : super(key: key);
-  final String title;
+  final Widget title;
   final Function()? onPress;
   final Color color;
   final String assetDecoration;
@@ -35,7 +35,7 @@ class AxieButton extends StatelessWidget {
             assetDecoration,
             color: Colors.black12,
           ),
-          Center(child: Text(title)),
+          Center(child: title),
           Padding(
             padding: const EdgeInsets.all(2),
             child: Material(

@@ -34,7 +34,7 @@ class AxieCloseButton extends StatelessWidget {
                 color: Colors.transparent,
                 child: InkWell(
                   borderRadius: BorderRadius.circular(5),
-                  onTap: () => windowManager.terminate(),
+                  onTap: () => windowManager.hide(),
                 ),
               ),
             )
