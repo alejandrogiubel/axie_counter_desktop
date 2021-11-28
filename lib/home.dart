@@ -1,4 +1,5 @@
 import 'package:animated_theme_switcher/animated_theme_switcher.dart';
+import 'package:axie_counter_desktop/about.dart';
 import 'package:axie_counter_desktop/widgets/axie_theme_switcher.dart';
 import 'package:axie_counter_desktop/widgets/axie_timer.dart';
 import 'package:axie_counter_desktop/widgets/counter.dart';
@@ -23,10 +24,21 @@ class Home extends StatelessWidget {
         bottomSheet: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 10),
           child: Row(
-            children: const [
-              AxieTimer(),
-              Spacer(),
-              AxieThemeSwitcher()
+            children: [
+              const AxieTimer(),
+              const Spacer(),
+              const AxieThemeSwitcher(),
+              IconButton(
+                onPressed: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => About()));
+                },
+                splashRadius: 20,
+                tooltip: 'Info',
+                icon: const Icon(
+                  CupertinoIcons.info,
+                  color: Colors.grey,
+                )
+              )
             ],
           ),
         ),

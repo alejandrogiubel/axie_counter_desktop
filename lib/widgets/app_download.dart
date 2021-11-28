@@ -24,7 +24,7 @@ class AppDownload extends StatelessWidget {
               children: [
                 const Padding(
                   padding: EdgeInsets.all(15),
-                  child: Text('Esta app solo se puede ejecutar en un único dispositivo luego de su compra. Por favor descargue la app desde:',
+                  child: SelectableText('This app can only be run on a single device after purchase. Please download the app from:',
                     textAlign: TextAlign.center,
                   ),
                 ),
